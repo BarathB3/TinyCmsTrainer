@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Blog bejegyzés";
+}
+
+<section class="container py-5">
+    <article class="mx-auto" style="max-width: 800px;">
+        <h1 class="fw-bold mb-3">Blog bejegyzés címe</h1>
+        <p class="text-secondary small mb-4">2025. Január 01.</p>
+
+        <img src="/images/blog1.jpg" class="img-fluid rounded mb-4" alt="Cikk képe">
+
+        <p class="lead">
+            Ez egy bemutató szöveg. Később helyette a valós blog tartalom
+            fog megjelenni adatbázisból betöltve.
+        </p>
+
+        <p>
+            További hosszabb tartalom… Ezt most csak azért írjuk, hogy látható
+            legyen a cikk megjelenése.
+        </p>
+
+        <a class="btn btn-outline-primary mt-4" asp-controller="Blog" asp-action="Index">
+            ← Vissza a bloghoz
+        </a>
+    </article>
+</section>

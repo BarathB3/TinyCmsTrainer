@@ -1,0 +1,147 @@
+﻿@{
+    ViewData["Title"] = "Edző – Személyi edzés & életmódváltás";
+}
+
+<!-- HERO Szekció -->
+<section class="hero text-light text-center d-flex align-items-center justify-content-center"
+         style="background: url('/images/hero_fitness.jpg') center/cover no-repeat; height: 80vh;">
+    <div class="bg-dark bg-opacity-50 p-4 rounded">
+        <h1 class="display-4 fw-bold mb-3">Változtasd meg a tested, változtasd meg az életed!</h1>
+        <p class="lead mb-4">Személyre szabott edzéstervek, táplálkozási útmutatás és folyamatos motiváció – végre elérheted, amit már régóta szeretnél.</p>
+        <a class="btn btn-primary btn-lg px-4" asp-controller="Pages" asp-action="Kapcsolat">Ingyenes konzultációt kérek</a>
+    </div>
+</section>
+
+
+<!-- Miért velem dolgozz? -->
+<section class="container text-center my-5">
+    <h2 class="fw-bold mb-4">Miben tudok segíteni?</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="icon mb-3">
+                <i class="bi bi-heart-pulse-fill fs-1 text-primary"></i>
+            </div>
+            <h5>Online és személyes edzés</h5>
+            <p>Teljesen rád szabott edzésterv – akár otthon, akár edzőteremben dolgoznál. Minden lépésnél ott leszek a fejlődésedért.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="icon mb-3">
+                <i class="bi bi-egg-fill fs-1 text-primary"></i>
+            </div>
+            <h5>Táplálkozási irányelvek</h5>
+            <p>Egyszerű, fenntartható étkezés, ami nem diéta… hanem életmód. Segítek, hogy energikus és magabiztos legyél.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="icon mb-3">
+                <i class="bi bi-people-fill fs-1 text-primary"></i>
+            </div>
+            <h5>Motiváció & támogatás</h5>
+            <p>Nem kell egyedül küzdened. Melletted leszek, hogy sose add fel a céljaidat – együtt érünk el mindent!</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Eredmények & Bizalomépítés -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4">Valódi eredmények. Valódi emberek.</h2>
+        <p class="fst-italic text-secondary mb-5">„2 hónap alatt több energiám lett, 8 kilót fogytam és végre magabiztosan nézek tükörbe.” – Kata, 32</p>
+
+        <a class="btn btn-outline-primary btn-lg" asp-controller="Pages" asp-action="Rolam">
+            Tudj meg többet rólam →
+        </a>
+    </div>
+</section>
+
+
+<!-- Szolgáltatások promó -->
+<section class="container my-5 text-center">
+    <h2 class="fw-bold mb-4">Válaszd ki a hozzád illő programot!</h2>
+    <p class="lead mb-4">Minden csomag személyre szabott konzultációval indul.</p>
+
+    <a class="btn btn-success btn-lg px-4" asp-controller="Pages" asp-action="Szolgaltatasok">
+        Megnézem a programokat →
+    </a>
+</section>
+
+
+<!-- CTA – Kapcsolat -->
+<section class="text-center bg-primary text-light p-5">
+    <h2 class="fw-bold mb-3">Készen állsz a változásra?</h2>
+    <p class="mb-4">Kérj ingyenes konzultációt most – felmérjük a céljaidat és megtervezzük az utadat!</p>
+    <a class="btn btn-light btn-lg" asp-controller="Pages" asp-action="Kapcsolat">
+        Foglalás most →
+    </a>
+</section>
+
+<!-- Bemutatkozás -->
+<section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2 class="fw-bold mb-3">Ki vagyok én?</h2>
+            <p class="lead">
+                Több mint 5 éve segítek embereknek lefogyni, izmosodni és
+                magabiztosabbá válni. Nem hiszek a gyors csodákban…
+                helyette személyre szabott, működő megoldást adok.
+            </p>
+            <a class="btn btn-primary mt-3" asp-controller="Pages" asp-action="Rolam">
+                Megismerném az edzőt →
+            </a>
+        </div>
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/600x400?text=Edzo+foto"
+                 class="img-fluid rounded shadow"
+                 alt="Személyi edző">
+        </div>
+    </div>
+</section>
+
+<!-- Hitelesség számokkal -->
+<section class="bg-dark text-light py-5">
+    <div class="container text-center">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h3 class="display-5 fw-bold">+150</h3>
+                <p>Elégedett ügyfél</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="display-5 fw-bold">+3 év</h3>
+                <p>Szakmai tapasztalat</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="display-5 fw-bold">100%</h3>
+                <p>Személyre szabott figyelem</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Vélemények -->
+<section class="container my-5 text-center">
+    <h2 class="fw-bold mb-4">Rólam mondták</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="p-4 bg-light rounded shadow-sm h-100">
+                <p class="fst-italic">„Az első hónap után már észrevehető volt a változás!”</p>
+                <strong>— Anna</strong>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4 bg-light rounded shadow-sm h-100">
+                <p class="fst-italic">„Végre egy edző, aki tényleg törődik velem!”</p>
+                <strong>— Martin</strong>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4 bg-light rounded shadow-sm h-100">
+                <p class="fst-italic">„Nem diéta. Életmód. Sokkal jobban érzem magam!”</p>
+                <strong>— Réka</strong>
+            </div>
+        </div>
+    </div>
+</section>

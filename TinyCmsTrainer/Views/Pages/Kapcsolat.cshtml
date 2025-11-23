@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Kapcsolat – Lépj velem kapcsolatba";
+}
+
+<!-- Kapcsolat Hero -->
+<section class="contact-hero text-center text-light d-flex align-items-center justify-content-center"
+         style="background: url('/images/contact_bg.jpg') center/cover no-repeat; height: 40vh;">
+    <div class="bg-dark bg-opacity-50 p-4 rounded">
+        <h1 class="fw-bold mb-3">Vedd fel velem a kapcsolatot!</h1>
+        <p class="lead">Induljunk el együtt a céljaid felé – már ma!</p>
+    </div>
+</section>
+
+<!-- Információk + térkép hely -->
+<section class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h3 class="fw-bold mb-4 text-primary">Elérhetőségeim</h3>
+
+            <p><strong>📍 Cím:</strong> Edzőterem, Győr központ</p>
+            <p><strong>📞 Telefon:</strong> +36 30 123 4567</p>
+            <p><strong>📧 Email:</strong> info@szemelyiedzo.hu</p>
+
+            <p class="mt-4 mb-4">
+                Töltsd ki az alábbi űrlapot és 24 órán belül válaszolok!
+            </p>
+
+            <!-- (Később itt lesz a valódi űrlap logika + adatbázis) -->
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Neved</label>
+                    <input type="text" class="form-control" placeholder="Add meg a neved">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email címed</label>
+                    <input type="email" class="form-control" placeholder="name@email.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Üzenet</label>
+                    <textarea class="form-control" rows="4" placeholder="Miben segíthetek?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                    Üzenet küldése →
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

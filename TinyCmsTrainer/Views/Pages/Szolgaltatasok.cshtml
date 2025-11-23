@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Szolgáltatások";
+}
+
+<section class="container py-5 text-center">
+    <h1 class="fw-bold mb-4">Válaszd ki a hozzád illő programot</h1>
+    <p class="text-secondary mb-5">Minden szolgáltatás személyre szabott konzultációval indul.</p>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h4 class="fw-bold mb-3">Online edzés</h4>
+                    <p>Saját otthonod kényelméből, szakértői vezetés mellett.</p>
+                    <strong>Ár: 15.000 Ft / alkalom</strong>
+                </div>
+                <div class="card-footer bg-white">
+                    <a class="btn btn-outline-primary w-100" asp-controller="Pages" asp-action="Kapcsolat">
+                        Érdekel!
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h4 class="fw-bold mb-3">Személyes edzésterv</h4>
+                    <p>Az edzőteremben találkozunk és együtt dolgozunk a céljaidon.</p>
+                    <strong>Ár: 20.000 Ft / alkalom</strong>
+                </div>
+                <div class="card-footer bg-white">
+                    <a class="btn btn-outline-primary w-100" asp-controller="Pages" asp-action="Kapcsolat">
+                        Foglalok időpontot
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h4 class="fw-bold mb-3">Életmódváltó program</h4>
+                    <p>Edzés + étkezés + mentális támogatás – teljes átalakulás.</p>
+                    <strong>Ár: Egyéni ajánlat</strong>
+                </div>
+                <div class="card-footer bg-white">
+                    <a class="btn btn-outline-primary w-100" asp-controller="Pages" asp-action="Kapcsolat">
+                        További info
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
