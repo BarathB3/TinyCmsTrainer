@@ -67,3 +67,22 @@ section h2 {
         height: 60vh;
     }
 }
+/*button*/
+body.light-theme {
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-theme .navbar {
+    background-color: #222;
+}
+
+.dark-theme .btn {
+    background-color: #444;
+    color: white;
+}

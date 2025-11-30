@@ -18,8 +18,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav ms-auto">
+
                         <li class="nav-item"><a class="nav-link" href="/">Kezdőlap</a></li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Pages" asp-action="Rolam">Rólam</a>
                         </li>
@@ -28,9 +29,10 @@
                             <a class="nav-link" asp-controller="Pages" asp-action="Szolgaltatasok">Szolgáltatások</a>
                         </li>
 
-                          <li class="nav-item">
-                            <a class="nav-link" asp-controller="Blog" asp-action="Index">Blog</a>
-                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Posts" asp-action="Index">Blog</a>
+
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Pages" asp-action="Kapcsolat">Kapcsolat</a>
@@ -38,6 +40,9 @@
 
 
                     </ul>
+
+                    <button id="themeToggle" class="btn btn-outline-light ms-3">🌙 Téma váltás</button>
+
                 </div>
             </div>
         </nav>

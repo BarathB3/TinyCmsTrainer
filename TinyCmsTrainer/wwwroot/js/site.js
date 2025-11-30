@@ -1,4 +1,12 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("themeToggle");
+    const body = document.body;
 
-// Write your JavaScript code.
+    // Alapértelmezett téma: világos
+    body.classList.add("light-theme");
+
+    toggle.addEventListener("click", function () {
+        body.classList.toggle("dark-theme");
+        body.classList.toggle("light-theme");
+    });
+});
