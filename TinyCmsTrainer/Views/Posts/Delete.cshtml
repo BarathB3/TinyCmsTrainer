@@ -1,0 +1,27 @@
+﻿@model TinyCmsTrainer.Models.Post
+
+@{
+    ViewData["Title"] = "Bejegyzés törlése";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>Biztosan törölni szeretnéd ezt a bejegyzést?</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-2">Cím:</dt>
+    <dd class="col-sm-10">@Model.Title</dd>
+
+    <dt class="col-sm-2">Kivonat:</dt>
+    <dd class="col-sm-10">@Model.Excerpt</dd>
+
+    <dt class="col-sm-2">Publikált:</dt>
+    <dd class="col-sm-10">@Model.IsPublished</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Törlés</button>
+    <a asp-action="Index" class="btn btn-secondary">Mégsem</a>
+</form>

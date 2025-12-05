@@ -1,0 +1,38 @@
+﻿@model TinyCmsTrainer.Models.Post
+
+@{
+    ViewData["Title"] = "Bejegyzés szerkesztése";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Slug" class="form-label"></label>
+        <input asp-for="Slug" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Excerpt" class="form-label"></label>
+        <textarea asp-for="Excerpt" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Content" class="form-label"></label>
+        <textarea asp-for="Content" class="form-control" rows="8"></textarea>
+    </div>
+
+    <div class="form-check mb-3">
+        <input asp-for="IsPublished" class="form-check-input" />
+        <label asp-for="IsPublished" class="form-check-label"></label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Mentés</button>
+</form>

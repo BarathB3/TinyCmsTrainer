@@ -94,7 +94,8 @@ INSERT INTO Settings (SettingKey, SettingValue)
 VALUES ('theme', 'light');
 
 
-INSERT INTO Roles (RoleName) VALUES ('Editor'), ('Author');
+INSERT INTO Roles (RoleName) VALUES ('Admin'), ('Editor'), ('Author');
+
 
 INSERT INTO Users (Username, PasswordHash, Email, RoleId)
 VALUES 

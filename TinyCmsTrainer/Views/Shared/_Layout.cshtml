@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TinyCmsTrainer</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/site.css?v=2" />
     <link rel="stylesheet" href="~/TinyCmsTrainer.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -37,6 +37,11 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Pages" asp-action="Kapcsolat">Kapcsolat</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Users" asp-action="Index">Felhasználók</a>
+                        </li>
+
 
 
                     </ul>

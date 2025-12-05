@@ -1,0 +1,37 @@
+﻿@model IEnumerable<TinyCmsTrainer.Models.Post>
+
+    @{
+    ViewData["Title"] = "Blog bejegyzések";
+    }
+
+    <h2>@ViewData["Title"]</h2>
+
+    <p>
+        <a class="btn btn-success" asp-action="Create">+ Új bejegyzés</a>
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Cím</th>
+                <th>Kivonat</th>
+                <th>Publikált</th>
+                <th>Műveletek</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Excerpt</td>
+                <td>@(item.IsPublished ? "✅ Igen" : "❌ Nem")</td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-slug="@item.Slug">Megtekintés</a>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@item.Id">Szerkesztés</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">Törlés</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>

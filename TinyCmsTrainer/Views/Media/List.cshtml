@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TinyCmsTrainer.Models.MediaFile>
+
+    @{
+    ViewData["Title"] = "Feltöltött fájlok";
+    }
+
+    <h2 class="my-4">📂 Feltöltött fájlok</h2>
+
+    @if (!Model.Any())
+{
+    <p>Nincs feltöltött fájl.</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var file in Model)
+        {
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="@file.FilePath" class="card-img-top" alt="@file.FileName" />
+                <div class="card-body">
+                    <p class="card-text">@file.FileName</p>
+                    <small class="text-muted">Feltöltve: @file.UploadedAt.ToShortDateString()</small>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+}

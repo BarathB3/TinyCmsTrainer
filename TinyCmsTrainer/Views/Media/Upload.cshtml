@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Fájl feltöltés";
+}
+
+<h2 class="my-4">📁 Fájl feltöltés</h2>
+
+@if (ViewBag.Message != null)
+{
+<div class="alert alert-success">@ViewBag.Message</div>
+}
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="file" class="form-label">Válassz fájlt:</label>
+        <input type="file" name="file" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Feltöltés</button>
+</form>
