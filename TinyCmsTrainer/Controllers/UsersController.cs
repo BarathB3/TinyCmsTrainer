@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using TinyCmsTrainer.Data;
 using TinyCmsTrainer.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;   // ← EZ a jó helye
 
 namespace TinyCmsTrainer.Controllers
 {
@@ -18,13 +19,7 @@ namespace TinyCmsTrainer.Controllers
         public IActionResult Index()
         {
             var users = _context.Users
-                .Select(u => new
-                {
-                    u.Id,
-                    u.Username,
-                    u.Email,
-                    RoleName = u.Role.RoleName
-                })
+                .Include(u => u.Role)
                 .ToList();
 
             return View(users);
