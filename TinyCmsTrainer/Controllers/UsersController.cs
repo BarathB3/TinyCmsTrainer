@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using TinyCmsTrainer.Data;
 using TinyCmsTrainer.Models;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;   // ← EZ a jó helye
 
 namespace TinyCmsTrainer.Controllers
 {
@@ -16,6 +16,7 @@ namespace TinyCmsTrainer.Controllers
             _context = context;
         }
 
+        // Felhasználók listázása
         public IActionResult Index()
         {
             var users = _context.Users
@@ -25,24 +26,42 @@ namespace TinyCmsTrainer.Controllers
             return View(users);
         }
 
+        // GET: új felhasználó létrehozása
         public IActionResult Create()
         {
             ViewBag.Roles = new SelectList(_context.Roles.ToList(), "Id", "RoleName");
             return View();
         }
 
+        // POST: új felhasználó mentése
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(User user)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Users.Add(user);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
+                // Hibák naplózása konzolra
+                foreach (var key in ModelState.Keys)
+                {
+                    var state = ModelState[key];
+                    foreach (var error in state.Errors)
+                    {
+                        Console.WriteLine($"HIBA a(z) '{key}' mezőnél: {error.ErrorMessage}");
+                    }
+                }
+
+                // Újratöltjük a szerepkörök listát
+                ViewBag.Roles = new SelectList(_context.Roles.ToList(), "Id", "RoleName");
+                return View(user);
             }
 
-            ViewBag.Roles = new SelectList(_context.Roles.ToList(), "Id", "RoleName");
-            return View(user);
+            // Ha minden OK, mentés adatbázisba
+            _context.Users.Add(user);
+            _context.SaveChanges();
+
+            // Vissza a listához
+            return RedirectToAction("Index");
         }
     }
 }
+

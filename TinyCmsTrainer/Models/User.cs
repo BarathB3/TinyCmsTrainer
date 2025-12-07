@@ -1,20 +1,33 @@
-﻿namespace TinyCmsTrainer.Models
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TinyCmsTrainer.Models
 {
     public class User
     {
         public int Id { get; set; }
 
-        public string Username { get; set; } = string.Empty;
+        [Required]
+        public string Username { get; set; }
 
-        public string PasswordHash { get; set; } = string.Empty;
+        [Required]
+        public string PasswordHash { get; set; }
 
-        public string Email { get; set; } = string.Empty;
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
 
+        [Required]
+        [Display(Name = "Szerepkör")]
         public int RoleId { get; set; }
+
+        [ForeignKey("RoleId")]
         public Role Role { get; set; }
 
-        public ICollection<Page> Pages { get; set; } = new List<Page>();
-        public ICollection<Post> Posts { get; set; } = new List<Post>();
-        public ICollection<MediaItem> MediaItems { get; set; } = new List<MediaItem>();
+        // A következő mezők opcionálissá lettek téve
+        public ICollection<Page>? Pages { get; set; }
+        public ICollection<Post>? Posts { get; set; }
+        public ICollection<MediaItem>? MediaItems { get; set; }
     }
 }
