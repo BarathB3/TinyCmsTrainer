@@ -22,12 +22,13 @@ namespace TinyCmsTrainer.Models
         [Display(Name = "Szerepkör")]
         public int RoleId { get; set; }
 
+        // Nullable legyen, hogy ne triggerelje a ModelState hibát
         [ForeignKey("RoleId")]
-        public Role Role { get; set; }
+        public Role? Role { get; set; }
 
-        // A következő mezők opcionálissá lettek téve
-        public ICollection<Page>? Pages { get; set; }
-        public ICollection<Post>? Posts { get; set; }
-        public ICollection<MediaItem>? MediaItems { get; set; }
+        // Ezeket is opcionálissá tesszük
+        public ICollection<Page>? Pages { get; set; } = new List<Page>();
+        public ICollection<Post>? Posts { get; set; } = new List<Post>();
+        public ICollection<MediaItem>? MediaItems { get; set; } = new List<MediaItem>();
     }
 }
