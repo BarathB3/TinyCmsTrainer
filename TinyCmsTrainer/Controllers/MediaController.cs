@@ -53,7 +53,8 @@ namespace TinyCmsTrainer.Controllers
                     UploadedAt = DateTime.Now
                 };
 
-                _context.MediaLibrary.Add(media);
+                _context.MediaItems.Add(media);
+
                 _context.SaveChanges();
 
                 ViewBag.Message = "Sikeres feltöltés!";
@@ -65,7 +66,8 @@ namespace TinyCmsTrainer.Controllers
         [HttpGet]
         public IActionResult List()
         {
-            var files = _context.MediaLibrary
+            var files = _context.MediaItems
+
                 .OrderByDescending(f => f.UploadedAt)
                 .ToList();
 
